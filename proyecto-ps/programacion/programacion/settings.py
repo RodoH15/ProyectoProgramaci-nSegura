@@ -128,8 +128,8 @@ CSRF_COOKIE_SAMESITE = 'Strict'
 # Hacer que las cookies expiren al cerrar la pestaña del navegador
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
-# Configurar la edad de la cookie de sesión en segundos (por ejemplo, 1 hora)
+# Configurar la edad de la cookie de sesión en segundos 
 SESSION_COOKIE_AGE = 3600  # 1 hora
 
-# Configurar la edad de la cookie CSRF en segundos (opcional)
+# Configurar la edad de la cookie CSRF en segundos
 CSRF_COOKIE_AGE = 3600  # 1 hora
