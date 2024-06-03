@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ver Respuestas</title>
+</head>
+<body>
+    <h1>Respuestas para {{ ejercicio.nombre_ejercicio }}</h1>
+    <ul>
+        {% for respuesta in respuestas %}
+        <li><a href="{% url 'detalle_respuesta' respuesta.id %}">{{ respuesta.nombre_alumno }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'menu_maestro' %}">Volver a menu</a>
+    <a href="{% url 'logout' %}">Cerrar sesión</a>
+</body>
+</html>

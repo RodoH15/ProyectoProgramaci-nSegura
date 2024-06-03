@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Maestro</title>
+</head>
+<body>
+    <h1>Menú Maestro</h1>
+    <ul>
+        <li><a href="{% url 'crear_ejercicio' %}">Crear Ejercicio</a></li>
+        {% if ejercicios %}
+            {% for ejercicio in ejercicios %}
+                <li><a href="{% url 'ver_respuestas' ejercicio.id %}">Ver Respuestas del Ejercicio {{ ejercicio.nombre_ejercicio }}</a></li>
+            {% endfor %}
+        {% else %}
+            <li>No hay ejercicios disponibles</li>
+        {% endif %}
+        {% if respuestas %}
+            {% for respuesta in respuestas %}
+                <li><a href="{% url 'detalle_respuesta' respuesta.id %}">Detalle Respuesta de {{ respuesta.nombre_alumno }}</a></li>
+            {% endfor %}
+        {% else %}
+            <li>No hay respuestas disponibles</li>
+        {% endif %}
+        <li><a href="{% url 'ver_puntajes' %}">Ver Puntajes</a></li>
+        <a href="{% url 'logout' %}">Cerrar sesión</a>
+    </ul>
+</body>
+</html>

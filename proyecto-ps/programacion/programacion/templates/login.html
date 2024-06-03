@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio de Sesión</title>
+</head>
+<body>
+    <div>
+        <h2>Inicio de Sesión</h2>
+        {% if messages %}
+        <div>
+            {% for message in messages %}
+            <div{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username" value="{{ request.session.username }}">
+            <input type="password" name="password" placeholder="Password" value="{{ request.session.password }}">
+            <button type="submit">Login</button>
+        </form>
+        <a href="{% url 'registro_usuario' %}">Registrar Usuario</a>
+        <a href="{% url 'logout' %}">Cerrar sesión</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalle Respuesta</title>
+</head>
+<body>
+    <h1>Respuesta de {{ respuesta.nombre_alumno }}</h1>
+    <p>{{ respuesta.respuesta }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <label for="puntaje">Puntaje:</label>
+        <input type="number" name="puntaje" id="puntaje" value="{{ respuesta.puntaje }}">
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="{% url 'ver_respuestas' respuesta.ejercicio.id %}">Volver</a>
+    <a href="{% url 'logout' %}">Cerrar sesión</a>
+</body>
+</html>

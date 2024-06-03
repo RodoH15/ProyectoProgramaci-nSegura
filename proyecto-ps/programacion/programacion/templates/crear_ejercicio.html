@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear Ejercicio</title>
+</head>
+<body>
+    <h1>Crear Ejercicio</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Crear</button>
+    </form>
+    <a href="{% url 'logout' %}">Cerrar sesión</a>
+    <a href="{% url 'menu_maestro' %}">menu</a>
+</body>
+</html>

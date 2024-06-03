@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ver Puntajes</title>
+</head>
+<body>
+    <h1>Puntajes de Ejercicios</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre del Alumno</th>
+                <th>Nombre del Ejercicio</th>
+                <th>Puntaje</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for respuesta in respuestas %}
+            <tr>
+                <td>{{ respuesta.nombre_alumno }}</td>
+                <td>{{ respuesta.ejercicio.nombre_ejercicio }}</td>
+                <td>{{ respuesta.puntaje }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'menu_maestro' %}">Volver a menu</a>
+    <a href="{% url 'logout' %}">Cerrar sesión</a>
+</body>
+</html>
