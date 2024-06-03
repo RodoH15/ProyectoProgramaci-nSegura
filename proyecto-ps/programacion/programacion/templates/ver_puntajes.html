@@ -14,6 +14,7 @@
             </tr>
         </thead>
         <tbody>
+            {% csrf_token %}
             {% for respuesta in respuestas %}
             <tr>
                 <td>{{ respuesta.nombre_alumno }}</td>

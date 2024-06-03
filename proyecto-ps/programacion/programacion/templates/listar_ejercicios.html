@@ -6,6 +6,7 @@
 <body>
     <h1>Listar Ejercicios</h1>
     <ul>
+        {% csrf_token %}
         {% for ejercicio in ejercicios %}
         <li><a href="{% url 'detalle_ejercicio' ejercicio.id %}">{{ ejercicio.nombre_ejercicio }}</a></li>
         {% endfor %}

@@ -6,6 +6,7 @@
 <body>
     <h1>Respuestas para {{ ejercicio.nombre_ejercicio }}</h1>
     <ul>
+        {% csrf_token %}
         {% for respuesta in respuestas %}
         <li><a href="{% url 'detalle_respuesta' respuesta.id %}">{{ respuesta.nombre_alumno }}</a></li>
         {% endfor %}

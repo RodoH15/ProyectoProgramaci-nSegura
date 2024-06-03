@@ -7,7 +7,7 @@
     <h1>{{ ejercicio.nombre_ejercicio }}</h1>
     <p>{{ ejercicio.descripcion_ejercicio }}</p>
     <p>Fecha de entrega: {{ ejercicio.fecha_entrega }}</p>
-   
+    {% csrf_token %}
     <a href="{% url 'listar_ejercicios' %}">Volver</a>
     <a href="{% url 'logout' %}">Cerrar sesión</a>
 </body>
