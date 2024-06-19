@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingresar Código de Acceso</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #e9f7ef; /* Verde claro para el fondo */
+            font-family: 'Arial', sans-serif;
+        }
+        .card {
+            border: 2px solid #28a745; /* Verde para el borde de la tarjeta */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para la tarjeta */
+        }
+        .card-header {
+            background-color: #28a745; /* Verde para el encabezado de la tarjeta */
+            color: white; /* Texto blanco para el encabezado */
+            font-size: 1.5rem;
+        }
+        .btn-primary {
+            background-color: #28a745; /* Verde para el botón principal */
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #19692c; /* Verde más oscuro al pasar el ratón */
+        }
+        .btn-link {
+            color: #007bff; /* Azul para los enlaces */
+        }
+        .btn-link:hover {
+            color: #0056b3; /* Azul más oscuro al pasar el ratón */
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .container {
+            margin-top: 5%;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #666;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        // Función para detectar la navegación hacia atrás y redirigir a la página de inicio de sesión
+        function handleBackNavigation() {
+            window.location.href = "{% url 'logout' %}";
+        }
+
+        window.onload = function() {
+            window.history.pushState(null, '', window.location.href);
+            window.addEventListener('popstate', handleBackNavigation);
+        };
+    </script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h2>Ingrese el Código de Acceso</h2>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="{% url 'ingresar_codigo_acceso' %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="codigo_acceso">Código de acceso</label>
+                                <input type="text" class="form-control" id="codigo_acceso" name="codigo_acceso" placeholder="Código de acceso" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Ingresar Código</button>
+                        </form>
+                        <div class="mt-3 text-center">
+                            <a href="{% url 'logout' %}" class="btn btn-link">Cerrar sesión</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer mt-3">
+                    <p>© 2024 Your Company. Todos los derechos reservados.</p>
+                    <p>
+                        <a href="#">Términos de Servicio</a> |
+                        <a href="#">Política de Privacidad</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
