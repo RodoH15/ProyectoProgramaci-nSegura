@@ -1,47 +1,41 @@
-name: SonarCloud
+name: Build and Analyze
 
 on:
   push:
     branches:
       - main
   pull_request:
-    types: [opened, synchronize, reopened, closed]
     branches:
       - main
 
 jobs:
-  sonarcloud:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
-      - name: Set up JDK 11
-        uses: actions/setup-java@v3
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
-          java-version: '11'
-          distribution: 'adopt'
+          python-version: '3.9'
 
-      - name: Cache SonarCloud packages
-        uses: actions/cache@v3
-        with:
-          path: ~/.sonar/cache
-          key: ${{ runner.os }}-sonar
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-      - name: Cache Maven packages
-        uses: actions/cache@v3
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-m2-
+      - name: Run tests
+        run: |
+          python manage.py test
 
-      - name: Build and analyze
+      - name: Run SonarCloud analysis
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          mvn clean verify sonar:sonar \
+          pip install sonar-scanner
+          sonar-scanner \
             -Dsonar.projectKey=ProgramacionSegura \
             -Dsonar.organization=your_organization \
             -Dsonar.host.url=https://sonarcloud.io \
