@@ -28,7 +28,7 @@ jobs:
 
       - name: Run tests
         run: |
-          python proyecto-ps/programacion/contenedor/app/manage.py test
+          python proyecto-ps/programacion/contenedor/app/manage.py
 
       - name: Download and install SonarScanner
         run: |
