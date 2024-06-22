@@ -28,13 +28,19 @@ jobs:
 
       - name: Run tests
         run: |
-          python proyecto-ps/programacion/contenedor/app/manage.py
+          python proyecto-ps/programacion/contenedor/app/manage.py test
+
+      - name: Download and install SonarScanner
+        run: |
+          curl -sSLo sonar-scanner-cli.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip
+          unzip sonar-scanner-cli.zip
+          mv sonar-scanner-4.6.2.2472-linux sonar-scanner
+          export PATH=$PATH:$(pwd)/sonar-scanner/bin
 
       - name: Run SonarCloud analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          pip install sonar-scanner
           sonar-scanner \
             -Dsonar.projectKey=ProgramacionSegura \
             -Dsonar.organization=your_organization \
