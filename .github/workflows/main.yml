@@ -12,6 +12,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: root_password
+          MYSQL_DATABASE: mydatabase
+          MYSQL_USER: myuser
+          MYSQL_PASSWORD: mypassword
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping --silent"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -21,28 +37,39 @@ jobs:
         with:
           python-version: '3.9'
 
+      - name: Install MySQL client
+        run: sudo apt-get install mysql-client
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r proyecto-ps/programacion/contenedor/requirements.txt
 
-      - name: Run tests
+      - name: Wait for MySQL
         run: |
-          python proyecto-ps/programacion/contenedor/app/manage.py
+          while ! mysqladmin ping -h "localhost" --silent; do
+            echo 'Waiting for MySQL...'
+            sleep 2
+          done
 
-      - name: Download and install SonarScanner
+      - name: Run tests
+        env:
+          DB_NAME: mydatabase
+          DB_USER: myuser
+          DB_PASSWORD: mypassword
+          DB_HOST: localhost
+          DB_PORT: 3306
+          DB_TEST_NAME: test_mydatabase
         run: |
-          curl -sSLo sonar-scanner-cli.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip
-          unzip sonar-scanner-cli.zip
-          mv sonar-scanner-4.6.2.2472-linux sonar-scanner
-          export PATH=$PATH:$(pwd)/sonar-scanner/bin
+          python proyecto-ps/programacion/contenedor/app/manage.py test --settings=tu_proyecto.settings
 
       - name: Run SonarCloud analysis
+        uses: SonarSource/sonarcloud-github-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: |
-          sonar-scanner \
-            -Dsonar.projectKey=ProgramacionSegura \
-            -Dsonar.organization=your_organization \
-            -Dsonar.host.url=https://sonarcloud.io \
+        with:
+          args: >
+            -Dsonar.projectKey=ProgramacionSegura
+            -Dsonar.organization=your_organization
+            -Dsonar.host.url=https://sonarcloud.io
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
