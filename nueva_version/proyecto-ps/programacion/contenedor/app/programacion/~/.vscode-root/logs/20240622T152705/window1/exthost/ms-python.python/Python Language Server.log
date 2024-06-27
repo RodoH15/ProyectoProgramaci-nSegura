@@ -1,0 +1,20 @@
+2024-06-22 15:27:12.755 [info] (Client) Pylance async client (2024.6.1) started with python extension (2024.8.1)
+2024-06-22 15:27:13.833 [info] [Info  - 15:27:13] (3168) Pylance language server 2024.6.1 (pyright version 1.1.364, commit 0618acc5) starting
+2024-06-22 15:27:13.834 [info] [Info  - 15:27:13] (3168) Server root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-06-22 15:27:13.835 [info] [Info  - 15:27:13] (3168) Starting service instance "programacion"
+2024-06-22 15:27:13.910 [info] Auto-Indent enabled
+2024-06-22 15:27:13.943 [info] Auto-Indent enabled
+2024-06-22 15:27:13.943 [info] [Info  - 15:27:13] (3168) Setting pythonPath for service "programacion": "/bin/python3"
+2024-06-22 15:27:13.945 [info] [Info  - 15:27:13] (3168) Setting environmentName for service "programacion": "3.9.2 (global)"
+2024-06-22 15:27:13.976 [info] [Info  - 15:27:13] (3168) Assuming Python version 3.9.2.final.0
+2024-06-22 15:27:14.421 [info] [Info  - 15:27:14] (3168) Found 27 source files
+2024-06-22 15:27:14.429 [info] Auto-Indent enabled
+2024-06-22 15:27:15.576 [info] [Info  - 15:27:15] (3168) Background analysis(1) root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-06-22 15:27:15.583 [info] [Info  - 15:27:15] (3168) Background analysis(1) started
+2024-06-22 15:27:16.436 [info] [Info  - 15:27:16] (3168) Indexer background runner(2) root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist (index)
+2024-06-22 15:27:16.436 [info] [Info  - 15:27:16] (3168) Indexing(2) started
+2024-06-22 15:27:18.243 [info] [Info  - 15:27:18] (3168) scanned(2) 83 files over 1 exec env
+2024-06-22 15:27:18.861 [info] [Info  - 15:27:18] (3168) [BG(1)] Long operation: checking: file:///root/proyecto-ps/programacion/contenedor/app/programacion/urls.py (2158ms)
+2024-06-22 15:27:18.862 [info] [Info  - 15:27:18] (3168) [BG(1)] Long operation: analyzing: file:///root/proyecto-ps/programacion/contenedor/app/programacion/urls.py (2731ms)
+2024-06-22 15:27:19.176 [info] [Info  - 15:27:19] (3168) indexed(2) 47 files over 1 exec env
+2024-06-22 15:27:19.249 [info] [Info  - 15:27:19] (3168) Indexing finished(2).

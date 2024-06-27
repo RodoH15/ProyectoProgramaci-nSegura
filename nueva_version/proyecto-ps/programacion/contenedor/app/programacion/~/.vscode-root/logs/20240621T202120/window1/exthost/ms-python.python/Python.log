@@ -1,0 +1,38 @@
+2024-06-21 20:21:24.356 [info] Experiment 'pythonCreateEnvOnPipInstall' is active
+2024-06-21 20:21:24.356 [info] Experiment 'pythonRecommendTensorboardExt' is active
+2024-06-21 20:21:24.356 [info] Experiment 'pythonTerminalEnvVarActivation' is active
+2024-06-21 20:21:24.356 [info] Experiment 'pythonTestAdapter' is active
+2024-06-21 20:21:24.455 [info] Default formatter is set to null for workspace /root/proyecto-ps/programacion/contenedor/app/programacion
+2024-06-21 20:21:24.489 [info] Python interpreter path: /bin/python3
+2024-06-21 20:21:24.560 [info] > pyenv which python
+2024-06-21 20:21:24.560 [info] cwd: .
+2024-06-21 20:21:27.217 [info] Starting Pylance language server.
+2024-06-21 20:57:11.497 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-21 21:42:07.819 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-22 01:42:12.095 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/utils.py
+2024-06-22 01:59:47.145 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/scripts.py
+2024-06-22 02:03:38.391 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/models.py
+2024-06-22 02:05:08.015 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/forms.py
+2024-06-22 02:20:12.367 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-22 02:25:59.383 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-22 02:27:01.925 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-22 02:27:49.805 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-22 02:31:06.994 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-22 02:33:52.477 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/scripts/scripts.py
+2024-06-22 02:34:36.552 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/scripts/__init__.py
+2024-06-22 02:49:48.039 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-22 02:50:22.703 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/scripts/scripts.py
+2024-06-22 02:50:24.029 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/scripts/scripts.py
+2024-06-22 02:51:14.543 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/models.py
+2024-06-22 02:52:09.721 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/forms.py
+2024-06-22 02:52:58.904 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-22 03:02:37.664 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/settings.py
+2024-06-22 03:03:02.032 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/urls.py
+2024-06-22 03:03:18.875 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/urls.py
+2024-06-22 03:25:17.913 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/forms.py
+2024-06-22 03:26:09.351 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-22 03:26:20.809 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-22 03:45:29.990 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/scripts/scripts.py
+2024-06-22 03:46:22.865 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-22 04:24:11.781 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-22 04:25:05.421 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py

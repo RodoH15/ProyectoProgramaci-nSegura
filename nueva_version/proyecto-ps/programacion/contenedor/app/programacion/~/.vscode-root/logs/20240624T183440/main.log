@@ -1,0 +1,17 @@
+2024-06-24 18:34:41.437 [info] update#setState idle
+2024-06-24 18:35:11.459 [info] update#setState checking for updates
+2024-06-24 18:35:11.471 [info] update#setState available for download
+2024-06-24 22:34:42.820 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-24 22:52:49.400 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-24 22:54:20.559 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-24 22:55:49.415 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-24 22:57:46.269 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-24 22:58:27.588 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-24 22:58:34.589 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-24 23:03:59.439 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-24 23:07:47.981 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-24 23:10:28.478 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-24 23:10:50.833 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-24 23:11:52.569 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-24 23:12:13.804 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-25 02:47:22.896 [info] Extension host with pid 4588 exited with code: 0, signal: unknown.

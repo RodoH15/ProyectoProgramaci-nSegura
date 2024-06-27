@@ -1,0 +1,6 @@
+2024-06-22 15:27:06.028 [info] update#setState idle
+2024-06-22 15:27:36.045 [info] update#setState checking for updates
+2024-06-22 15:27:36.056 [info] update#setState available for download
+2024-06-22 20:44:30.546 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-22 20:47:22.001 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-22 21:28:58.075 [info] Extension host with pid 3015 exited with code: 0, signal: unknown.

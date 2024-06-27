@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ver Puntajes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Fondo gris claro */
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            margin-top: 5%;
+        }
+        .card {
+            border: 2px solid #17a2b8; /* Azul para el borde de la tarjeta */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para la tarjeta */
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .card-header {
+            background-color: #17a2b8; /* Azul para el encabezado de la tarjeta */
+            color: white; /* Texto blanco para el encabezado */
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .card-body {
+            padding: 2rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #17a2b8;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .btn-primary {
+            background-color: #17a2b8; /* Azul para el botón principal */
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #117a8b; /* Azul más oscuro al pasar el ratón */
+        }
+        .btn-link {
+            color: #007bff; /* Azul para los enlaces */
+        }
+        .btn-link:hover {
+            color: #0056b3; /* Azul más oscuro al pasar el ratón */
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #666;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .decorative-element {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: rgba(23, 162, 184, 0.1);
+            border-radius: 50%;
+            z-index: -1;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        .decorative-element-1 {
+            top: -50px;
+            left: -50px;
+        }
+        .decorative-element-2 {
+            bottom: -50px;
+            right: -50px;
+        }
+        .decorative-element-3 {
+            bottom: 10%;
+            left: 10%;
+            animation-duration: 7s;
+        }
+        .decorative-element-4 {
+            top: 20%;
+            right: 20%;
+            animation-duration: 8s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="decorative-element decorative-element-1"></div>
+        <div class="decorative-element decorative-element-2"></div>
+        <div class="decorative-element decorative-element-3"></div>
+        <div class="decorative-element decorative-element-4"></div>
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Puntajes de Ejercicios</h2>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Nombre del Alumno</th>
+                                    <th>Nombre del Ejercicio</th>
+                                    <th>Puntaje</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% csrf_token %}
+                                {% for respuesta in respuestas %}
+                                <tr>
+                                    <td>{{ respuesta.nombre_alumno }}</td>
+                                    <td>{{ respuesta.ejercicio.nombre_ejercicio }}</td>
+                                    <td>{{ respuesta.puntaje }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        <div class="mt-3 text-center">
+                            <a href="{% url 'menu_maestro' %}" class="btn btn-link">Volver a menú</a>
+                            <a href="{% url 'logout' %}" class="btn btn-link">Cerrar sesión</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer mt-3">
+                    <p>© 2024 Universidad Veracruzana. Todos los derechos reservados.</p>
+                    <p>
+                        <a href="#">Términos de Servicio</a> |
+                        <a href="#">Política de Privacidad</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Alumno</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #d4edda, #f8f9fa);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 80%;
+            max-width: 900px;
+        }
+        .header {
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .subheader {
+            background-color: #218838;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 1.5rem;
+        }
+        .card-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .menu-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .menu-option:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .menu-option i {
+            font-size: 3rem;
+            color: #28a745;
+            margin-bottom: 10px;
+        }
+        .menu-option h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .menu-option p {
+            color: #666;
+            font-size: 1rem;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #666;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .exercise-select {
+            width: 100%;
+            max-width: 400px;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Bienvenidos al Sistema de Evaluación Eminus 5</div>
+        <div class="subheader">Menú Alumno</div>
+        <div class="card-body">
+            <div class="menu-option">
+                <a href="{% url 'listar_ejercicios' %}" class="btn btn-link">
+                    <i class="fas fa-list"></i>
+                    <h3>Listar Ejercicios</h3>
+                    <p>Ver todos los ejercicios disponibles.</p>
+                </a>
+            </div>
+            <div class="menu-option">
+                <form method="get" action="">
+                    <i class="fas fa-info-circle"></i>
+                    <h3>Ver Detalle del Ejercicio</h3>
+                    <select name="ejercicio_id" class="exercise-select" onchange="if(this.value) window.location.href='{% url 'detalle_ejercicio' 0 %}'.replace('0', this.value)">
+                        <option value="" disabled selected>Selecciona un ejercicio</option>
+                        {% for ejercicio in ejercicios %}
+                        <option value="{{ ejercicio.id }}">{{ ejercicio.nombre_ejercicio }}</option>
+                        {% endfor %}
+                    </select>
+                </form>
+            </div>
+            <div class="menu-option">
+                <form method="get" action="">
+                    <i class="fas fa-upload"></i>
+                    <h3>Subir Respuesta</h3>
+                    <select name="ejercicio_id" class="exercise-select" onchange="if(this.value) window.location.href='{% url 'subir_respuesta' 0 %}'.replace('0', this.value)">
+                        <option value="" disabled selected>Selecciona un ejercicio</option>
+                        {% for ejercicio in ejercicios %}
+                        <option value="{{ ejercicio.id }}">{{ ejercicio.nombre_ejercicio }}</option>
+                        {% endfor %}
+                    </select>
+                </form>
+            </div>
+            <div class="menu-option">
+                <a href="{% url 'logout' %}" class="btn btn-link">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <h3>Cerrar sesión</h3>
+                    <p>Salir de la plataforma.</p>
+                </a>
+            </div>
+        </div>
+        <div class="footer">
+            <p>© 2024 Universidad Veracruzana. Todos los derechos reservados.</p>
+            <p>
+                <a href="#">Términos de Servicio</a> |
+                <a href="#">Política de Privacidad</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

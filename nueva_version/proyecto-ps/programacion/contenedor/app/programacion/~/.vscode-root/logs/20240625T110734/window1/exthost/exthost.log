@@ -1,0 +1,15 @@
+2024-06-25 11:07:43.198 [info] Extension host with pid 6118 started
+2024-06-25 11:07:43.198 [info] Skipping acquiring lock for /root/proyecto-ps/programacion/contenedor/app/programacion/~/.vscode-root/User/workspaceStorage/2386edbb9f70495b74de1d3cbe6cf362.
+2024-06-25 11:07:43.626 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-06-25 11:07:43.720 [info] ExtensionService#_doActivateExtension vscode.html-language-features, startup: false, activationEvent: 'onLanguage:html'
+2024-06-25 11:07:44.428 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-06-25 11:07:45.724 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-06-25 11:07:45.862 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-06-25 11:07:46.742 [info] Eager extensions activated
+2024-06-25 11:07:47.063 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-06-25 11:07:47.088 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-06-25 11:21:59.118 [info] ExtensionService#_doActivateExtension ms-python.python, startup: false, activationEvent: 'onLanguage:python', root cause: ms-python.debugpy
+2024-06-25 11:22:00.211 [info] ExtensionService#_doActivateExtension ms-python.debugpy, startup: false, activationEvent: 'onLanguage:python'
+2024-06-25 11:22:00.480 [info] ExtensionService#_doActivateExtension ms-python.vscode-pylance, startup: false, activationEvent: 'onLanguage:python'
+2024-06-25 15:24:48.921 [info] Extension host terminating: renderer closed the MessagePort
+2024-06-25 15:24:49.003 [info] Extension host with pid 6118 exiting with code 0
