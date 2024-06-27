@@ -1,0 +1,5 @@
+2024-06-22 11:20:52.542 [info] Started local extension host with pid 1662.
+2024-06-22 11:21:02.519 [info] [perf] Render performance baseline is 165ms
+2024-06-22 14:21:17.754 [warning] Failed to fetch chat participant registry XHR failed
+2024-06-22 14:26:31.855 [warning] Failed to fetch chat participant registry XHR failed
+2024-06-22 14:37:29.853 [warning] Failed to fetch chat participant registry XHR timeout: undefinedms

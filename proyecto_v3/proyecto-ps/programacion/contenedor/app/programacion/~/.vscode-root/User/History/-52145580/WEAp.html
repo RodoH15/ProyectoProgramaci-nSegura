@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Ejercicios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin: 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .list-group {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .list-group-item {
+            padding: 15px 20px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .list-group-item:last-child {
+            border-bottom: none;
+        }
+        .list-group-item a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2rem;
+        }
+        .list-group-item:hover {
+            background-color: #f0f0f0;
+        }
+        .list-group-item a:hover {
+            color: #4CAF50;
+        }
+        .logout {
+            display: block;
+            text-align: center;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            width: 150px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+        .logout:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Listar Ejercicios</div>
+    <div class="container">
+        <ul class="list-group">
+            {% csrf_token %}
+            {% for ejercicio in ejercicios %}
+            <li class="list-group-item"><a href="{% url 'detalle_ejercicio' ejercicio.id %}">{{ ejercicio.nombre_ejercicio }}</a></li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'logout' %}" class="logout">Cerrar sesión</a>
+    </div>
+</body>
+</html>

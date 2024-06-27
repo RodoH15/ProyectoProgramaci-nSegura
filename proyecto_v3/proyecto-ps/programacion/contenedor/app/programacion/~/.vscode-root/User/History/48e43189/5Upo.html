@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalle Ejercicio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            margin: -20px -20px 20px -20px;
+            border-radius: 8px 8px 0 0;
+        }
+        p {
+            color: #333;
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .btn-logout {
+            background-color: #e74c3c;
+        }
+        .btn-logout:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ ejercicio.nombre_ejercicio }}</h1>
+        <p>{{ ejercicio.descripcion_ejercicio }}</p>
+        <p>Fecha de entrega: {{ ejercicio.fecha_entrega }}</p>
+        {% csrf_token %}
+        <a href="{% url 'listar_ejercicios' %}" class="btn">Volver</a>
+        <a href="{% url 'logout' %}" class="btn btn-logout">Cerrar sesión</a>
+    </div>
+</body>
+</html>

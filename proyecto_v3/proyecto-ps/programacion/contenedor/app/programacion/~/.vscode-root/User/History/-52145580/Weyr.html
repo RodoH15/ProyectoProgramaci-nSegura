@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Ejercicios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin: 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            background: linear-gradient(145deg, #e6f7ff, #ffffff);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card-header {
+            background-color: #f8f9fa;
+            font-size: 1.25rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 2px solid #007bff;
+        }
+        .card-header .icon {
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+        .card-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #e6f7ff 0%, #ffffff 100%);
+        }
+        .card-body .icon {
+            font-size: 4rem;
+            color: #007bff;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        .card-body p {
+            font-size: 1rem;
+            color: #666;
+            margin: 0;
+        }
+        .card-body .highlight {
+            font-size: 1.2rem;
+            color: #007bff;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .card-footer {
+            background-color: #f8f9fa;
+            text-align: right;
+            padding: 10px 20px;
+            border-top: 2px solid #007bff;
+        }
+        .card-footer a {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .card-footer a:hover {
+            background-color: #0056b3;
+        }
+        .logout {
+            display: block;
+            text-align: center;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            width: 150px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+        .logout:hover {
+            background-color: #c0392b;
+        }
+        .decorative-element {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: rgba(0, 123, 255, 0.1);
+            border-radius: 50%;
+            z-index: -1;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        .decorative-element-1 {
+            top: -50px;
+            left: -50px;
+        }
+        .decorative-element-2 {
+            bottom: -50px;
+            right: -50px;
+        }
+        .decorative-rectangle {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(0, 123, 255, 0.1);
+            border-radius: 10px;
+            z-index: -1;
+            animation: rotate 8s linear infinite;
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .decorative-rectangle-1 {
+            top: -30px;
+            left: 20px;
+        }
+        .decorative-rectangle-2 {
+            bottom: -30px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Listar Ejercicios</div>
+    <div class="container">
+        <div class="row">
+            {% csrf_token %}
+            {% for ejercicio in ejercicios %}
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="decorative-element decorative-element-1"></div>
+                    <div class="decorative-element decorative-element-2"></div>
+                    <div class="decorative-rectangle decorative-rectangle-1"></div>
+                    <div class="decorative-rectangle decorative-rectangle-2"></div>
+                    <div class="card-header">
+                        <span>{{ ejercicio.nombre_ejercicio }}</span>
+                        <span class="icon"><i class="fas fa-book-open"></i></span>
+                    </div>
+                    <div class="card-body">
+                        <span class="icon"><i class="fas fa-tasks"></i></span>
+                        <p class="highlight">Fecha de Entrega: {{ ejercicio.fecha_entrega }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{% url 'detalle_ejercicio' ejercicio.id %}">Ver detalles</a>
+                        {% if user.is_maestro %}
+                        <a href="{% url 'eliminar_ejercicio' ejercicio.id %}" class="btn-delete">Eliminar</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <a href="{% url 'logout' %}" class="logout">Cerrar sesión</a>
+    </div>
+</body>
+</html>

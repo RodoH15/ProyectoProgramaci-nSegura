@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle Ejercicio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #ffffff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            animation: slideIn 0.5s ease-in-out;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        .description {
+            color: #555;
+            font-size: 1.2rem;
+            margin: 15px 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .due-date {
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .btn-logout {
+            background-color: #dc3545;
+        }
+        .btn-logout:hover {
+            background-color: #c82333;
+            transform: scale(1.05);
+        }
+        .decorative-element {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: rgba(0, 123, 255, 0.1);
+            border-radius: 50%;
+            z-index: -1;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        .decorative-element-1 {
+            top: -50px;
+            left: -50px;
+        }
+        .decorative-element-2 {
+            bottom: -50px;
+            right: -50px;
+        }
+        .footer {
+            margin-top: 20px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="decorative-element decorative-element-1"></div>
+        <div class="decorative-element decorative-element-2"></div>
+        <div class="header">{{ ejercicio.nombre_ejercicio }}</div>
+        <div class="description">{{ ejercicio.descripcion_ejercicio }}</div>
+        <div class="due-date">Fecha de entrega: {{ ejercicio.fecha_entrega }}</div>
+        
+        {% if messages %}
+            <div class="alert alert-success" role="alert">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <a href="{% url 'menu_maestro' %}" class="btn">Volver al menú</a>
+        <a href="{% url 'logout' %}" class="btn btn-logout">Cerrar sesión</a>
+        <div class="footer">
+            © 2024 Universidad Veracruzana. Todos los derechos reservados.
+        </div>
+    </div>
+</body>
+</html>

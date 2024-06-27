@@ -1,0 +1,20 @@
+2024-06-24 18:34:56.627 [info] (Client) Pylance async client (2024.6.1) started with python extension (2024.8.1)
+2024-06-24 18:34:59.651 [info] [Info  - 18:34:59] (4699) Pylance language server 2024.6.1 (pyright version 1.1.364, commit 0618acc5) starting
+2024-06-24 18:34:59.656 [info] [Info  - 18:34:59] (4699) Server root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-06-24 18:34:59.698 [info] [Info  - 18:34:59] (4699) Starting service instance "programacion"
+2024-06-24 18:34:59.831 [info] Auto-Indent enabled
+2024-06-24 18:34:59.932 [info] Auto-Indent enabled
+2024-06-24 18:34:59.940 [info] [Info  - 18:34:59] (4699) Setting pythonPath for service "programacion": "/bin/python3"
+2024-06-24 18:34:59.941 [info] [Info  - 18:34:59] (4699) Setting environmentName for service "programacion": "3.9.2 (global)"
+2024-06-24 18:35:00.150 [info] [Info  - 18:35:00] (4699) Assuming Python version 3.9.2.final.0
+2024-06-24 18:35:01.173 [info] [Info  - 18:35:01] (4699) Found 27 source files
+2024-06-24 18:35:01.189 [info] Auto-Indent enabled
+2024-06-24 18:35:02.679 [info] [Info  - 18:35:02] (4699) Background analysis(1) root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-06-24 18:35:02.688 [info] [Info  - 18:35:02] (4699) Background analysis(1) started
+2024-06-24 18:35:04.643 [info] [Info  - 18:35:04] (4699) Indexer background runner(2) root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist (index)
+2024-06-24 18:35:04.647 [info] [Info  - 18:35:04] (4699) Indexing(2) started
+2024-06-24 18:35:05.704 [info] [Info  - 18:35:05] (4699) [BG(1)] Long operation: analyzing: file:///root/proyecto-ps/programacion/contenedor/app/programacion/settings.py (2300ms)
+2024-06-24 18:35:07.657 [info] [Info  - 18:35:07] (4699) [IDX(2)] Long operation: scan packages file:///root/proyecto-ps/programacion/contenedor/app/programacion (2616ms)
+2024-06-24 18:35:07.657 [info] [Info  - 18:35:07] (4699) scanned(2) 83 files over 1 exec env
+2024-06-24 18:35:08.592 [info] [Info  - 18:35:08] (4699) indexed(2) 47 files over 1 exec env
+2024-06-24 18:35:08.714 [info] [Info  - 18:35:08] (4699) Indexing finished(2).

@@ -1,0 +1,19 @@
+2024-06-22 11:20:56.477 [info] Experiment 'pythonCreateEnvOnPipInstall' is active
+2024-06-22 11:20:56.480 [info] Experiment 'pythonRecommendTensorboardExt' is active
+2024-06-22 11:20:56.480 [info] Experiment 'pythonTerminalEnvVarActivation' is active
+2024-06-22 11:20:56.480 [info] Experiment 'pythonTestAdapter' is active
+2024-06-22 11:20:56.765 [info] Default formatter is set to null for workspace /root/proyecto-ps/programacion/contenedor/app/programacion
+2024-06-22 11:20:56.833 [info] Python interpreter path: /bin/python3
+2024-06-22 11:20:57.160 [info] > pyenv which python
+2024-06-22 11:20:57.160 [info] cwd: .
+2024-06-22 11:21:03.581 [info] Starting Pylance language server.
+2024-06-22 11:33:08.028 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/scripts/scripts.py
+2024-06-22 11:34:41.275 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-22 11:36:01.739 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-22 11:36:06.332 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-22 11:40:25.454 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/scripts/scripts.py
+2024-06-22 11:41:06.094 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/scripts/__init__.py
+2024-06-22 11:58:18.322 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-22 11:59:35.790 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/scripts/scripts.py
+2024-06-22 12:01:35.845 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-22 13:58:23.257 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/urls.py
