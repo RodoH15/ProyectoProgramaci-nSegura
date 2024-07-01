@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Subir Respuesta</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #f4f4f4);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 60%;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #ffffff, #d4edda);
+        }
+
+        .header {
+            text-align: center;
+            background: #4caf50;
+            color: white;
+            padding: 15px;
+            border-radius: 10px 10px 0 0;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-group label {
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            background: #4caf50;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-control:focus {
+            border-color: #4caf50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+
+        button {
+            padding: 10px;
+            background: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background: #388e3c;
+            transform: translateY(-3px);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .footer a:hover {
+            color: #0056b3;
+        }
+
+        .background-deco {
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(76, 175, 80, 0.1);
+            border-radius: 50%;
+            z-index: 0;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .background-deco-2 {
+            bottom: -50px;
+            right: -50px;
+            top: auto;
+            left: auto;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Subir Respuesta para: {{ ejercicio.nombre_ejercicio }}</h1>
+        </div>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.nombre_alumno.label_tag }}
+                {{ form.nombre_alumno }}
+            </div>
+            <div class="form-group">
+                {{ form.respuesta.label_tag }}
+                {{ form.respuesta }}
+            </div>
+            <div class="form-group">
+                {{ form.codigo_archivo.label_tag }}
+                {{ form.codigo_archivo }}
+            </div>
+            <button type="submit">Subir Respuesta</button>
+        </form>
+        <div class="footer">
+            <a href="{% url 'logout' %}">Cerrar sesión</a>
+        </div>
+        <div class="background-deco"></div>
+        <div class="background-deco background-deco-2"></div>
+    </div>
+</body>
+</html>

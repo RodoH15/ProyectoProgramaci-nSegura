@@ -1,0 +1,21 @@
+2024-06-29 23:24:05.123 [info] (Client) Pylance async client (2024.6.1) started with python extension (2024.8.1)
+2024-06-29 23:24:07.268 [info] [Info  - 23:24:07] (4407) Pylance language server 2024.6.1 (pyright version 1.1.364, commit 0618acc5) starting
+2024-06-29 23:24:07.273 [info] [Info  - 23:24:07] (4407) Server root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-06-29 23:24:07.274 [info] [Info  - 23:24:07] (4407) Starting service instance "programacion"
+2024-06-29 23:24:07.374 [info] Auto-Indent enabled
+2024-06-29 23:24:07.432 [info] Auto-Indent enabled
+2024-06-29 23:24:07.439 [info] [Info  - 23:24:07] (4407) Setting pythonPath for service "programacion": "/bin/python3"
+2024-06-29 23:24:07.440 [info] [Info  - 23:24:07] (4407) Setting environmentName for service "programacion": "3.9.2 (global)"
+2024-06-29 23:24:07.523 [info] [Info  - 23:24:07] (4407) Assuming Python version 3.9.2.final.0
+2024-06-29 23:24:08.246 [info] [Info  - 23:24:08] (4407) Found 31 source files
+2024-06-29 23:24:08.261 [info] Auto-Indent enabled
+2024-06-29 23:24:09.889 [info] [Info  - 23:24:09] (4407) Background analysis(1) root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-06-29 23:24:09.899 [info] [Info  - 23:24:09] (4407) Background analysis(1) started
+2024-06-29 23:24:11.612 [info] [Info  - 23:24:11] (4407) Indexer background runner(2) root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist (index)
+2024-06-29 23:24:11.614 [info] [Info  - 23:24:11] (4407) Indexing(2) started
+2024-06-29 23:24:14.160 [info] [Info  - 23:24:14] (4407) [IDX(2)] Long operation: scan packages file:///root/proyecto-ps/programacion/contenedor/app/programacion (2295ms)
+2024-06-29 23:24:14.160 [info] [Info  - 23:24:14] (4407) scanned(2) 83 files over 1 exec env
+2024-06-29 23:24:15.122 [info] [Info  - 23:24:15] (4407) indexed(2) 47 files over 1 exec env
+2024-06-29 23:24:15.217 [info] [Info  - 23:24:15] (4407) Indexing finished(2).
+2024-06-29 23:26:26.186 [info] [Info  - 23:26:26] (4407) [BG(1)] Long operation: checking: file:///root/proyecto-ps/programacion/contenedor/app/programacion/views.py (2622ms)
+2024-06-29 23:26:26.188 [info] [Info  - 23:26:26] (4407) [BG(1)] Long operation: analyzing: file:///root/proyecto-ps/programacion/contenedor/app/programacion/views.py (2721ms)

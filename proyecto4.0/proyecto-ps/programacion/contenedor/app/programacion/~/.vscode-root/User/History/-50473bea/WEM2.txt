@@ -1,0 +1,51 @@
+
+hola mundo
+
+!!!!!!
+
+hola mundo
+
+$$$$$$
+
+
+nada
+
+!!!!!!
+
+nada
+
+$$$$$$
+
+
+hey mundo
+
+!!!!!!
+
+hey mundo
+
+$$$$$$
+
+# Casos de prueba adicionales para el código de suma
+5,3
+
+!!!!!!
+
+8
+
+$$$$$$
+
+7,2
+
+!!!!!!
+
+9
+
+$$$$$$
+
+10,5
+
+!!!!!!
+
+15
+
+$$$$$$

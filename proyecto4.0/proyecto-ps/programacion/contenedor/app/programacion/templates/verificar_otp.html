@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar OTP</title>
+</head>
+<body>
+    <h2>Verificar código OTP</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="otp">Código OTP:</label>
+        <input type="text" id="otp" name="otp" required>
+        <button type="submit">Verificar</button>
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+        {% endif %}
+    </form>
+    <a href="{% url 'logout' %}">Cerrar sesión</a>
+</body>
+</html>

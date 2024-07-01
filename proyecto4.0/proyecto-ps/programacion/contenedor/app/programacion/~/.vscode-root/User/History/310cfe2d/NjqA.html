@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis Puntajes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Fondo gris claro */
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            margin-top: 5%;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #666;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="text-center">Mis Puntajes</h2>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Ejercicio</th>
+                            <th>Puntaje</th>
+                            <th>Fecha de Subida</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for respuesta in respuestas %}
+                        <tr>
+                            <td>{{ respuesta.ejercicio.nombre_ejercicio }}</td>
+                            <td>{{ respuesta.puntaje }}</td>
+                            <td>{{ respuesta.fecha_subida }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div class="text-center">
+                    <a href="{% url 'menu_alumno' %}" class="btn btn-primary">Volver al Menú</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer mt-3">
+            <p>© 2024 Universidad Veracruzana. Todos los derechos reservados.</p>
+            <p>
+                <a href="#">Términos de Servicio</a> |
+                <a href="#">Política de Privacidad</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

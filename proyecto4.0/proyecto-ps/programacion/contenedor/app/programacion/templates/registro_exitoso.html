@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro Exitoso</title>
+</head>
+<body>
+    {% csrf_token %}
+    <h1>¡Registro Exitoso!</h1>
+    <p>Tu registro se ha completado exitosamente. Ahora puedes iniciar sesión.</p>
+    <a href="{% url 'login' %}">Iniciar Sesión</a>
+</body>
+</html>

@@ -1,0 +1,23 @@
+2024-06-27 23:18:01.354 [info] (Client) Pylance async client (2024.6.1) started with python extension (2024.8.1)
+2024-06-27 23:18:03.930 [info] [Info  - 23:18:03] (3928) Pylance language server 2024.6.1 (pyright version 1.1.364, commit 0618acc5) starting
+2024-06-27 23:18:03.933 [info] [Info  - 23:18:03] (3928) Server root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-06-27 23:18:03.933 [info] [Info  - 23:18:03] (3928) Starting service instance "programacion"
+2024-06-27 23:18:04.036 [info] Auto-Indent enabled
+2024-06-27 23:18:04.083 [info] Auto-Indent enabled
+2024-06-27 23:18:04.088 [info] [Info  - 23:18:04] (3928) Setting pythonPath for service "programacion": "/bin/python3"
+2024-06-27 23:18:04.089 [info] [Info  - 23:18:04] (3928) Setting environmentName for service "programacion": "3.9.2 (global)"
+2024-06-27 23:18:04.218 [info] [Info  - 23:18:04] (3928) Assuming Python version 3.9.2.final.0
+2024-06-27 23:18:05.475 [info] [Info  - 23:18:05] (3928) Found 29 source files
+2024-06-27 23:18:05.489 [info] Auto-Indent enabled
+2024-06-27 23:18:08.161 [info] [Info  - 23:18:08] (3928) Background analysis(1) root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-06-27 23:18:08.174 [info] [Info  - 23:18:08] (3928) Background analysis(1) started
+2024-06-27 23:18:10.758 [info] [Info  - 23:18:10] (3928) Indexer background runner(2) root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist (index)
+2024-06-27 23:18:10.759 [info] [Info  - 23:18:10] (3928) Indexing(2) started
+2024-06-27 23:18:12.548 [info] [Info  - 23:18:12] (3928) [BG(1)] Long operation: SemanticTokens full at file:///root/proyecto-ps/programacion/contenedor/app/programacion/models.py (2368ms)
+2024-06-27 23:18:14.640 [info] [Info  - 23:18:14] (3928) [IDX(2)] Long operation: scan packages file:///root/proyecto-ps/programacion/contenedor/app/programacion (3520ms)
+2024-06-27 23:18:14.641 [info] [Info  - 23:18:14] (3928) scanned(2) 83 files over 1 exec env
+2024-06-27 23:18:15.481 [info] [Info  - 23:18:15] (3928) indexed(2) 47 files over 1 exec env
+2024-06-27 23:18:15.581 [info] [Info  - 23:18:15] (3928) Indexing finished(2).
+2024-06-27 23:27:34.060 [info] [Info  - 23:27:34] (3928) [BG(1)] Long operation: checking: file:///root/proyecto-ps/programacion/contenedor/app/programacion/views.py (2219ms)
+2024-06-27 23:27:34.061 [info] [Info  - 23:27:34] (3928) [BG(1)] Long operation: analyzing: file:///root/proyecto-ps/programacion/contenedor/app/programacion/views.py (2259ms)
+2024-06-27 23:58:00.635 [info] [Info  - 23:58:00] (3928) Found 30 source files

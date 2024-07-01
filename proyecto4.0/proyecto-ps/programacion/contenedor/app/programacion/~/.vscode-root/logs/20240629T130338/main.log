@@ -1,0 +1,13 @@
+2024-06-29 13:03:39.386 [info] update#setState idle
+2024-06-29 13:04:09.401 [info] update#setState checking for updates
+2024-06-29 13:04:09.419 [info] update#setState available for download
+2024-06-29 15:39:38.239 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-29 15:40:00.413 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-29 15:45:15.320 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-29 19:57:44.399 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-29 20:01:19.593 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-29 20:04:41.088 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-29 20:08:38.170 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-29 20:12:58.253 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-29 20:16:32.654 [warning] No ptyHost heartbeat after 6 seconds
+2024-06-29 20:40:39.319 [info] Extension host with pid 6284 exited with code: 0, signal: unknown.

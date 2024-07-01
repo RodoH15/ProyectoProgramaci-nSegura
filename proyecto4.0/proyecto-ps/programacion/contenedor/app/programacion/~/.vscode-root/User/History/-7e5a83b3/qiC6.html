@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Usuario</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .register-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .register-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 500;
+            text-align: center;
+            position: relative;
+        }
+        .register-container h2::after {
+            content: '';
+            width: 50px;
+            height: 4px;
+            background-color: #007bff;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        .register-container input[type="text"],
+        .register-container input[type="password"],
+        .register-container input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+            background-color: #f8f9fa;
+        }
+        .register-container input[type="text"]:focus,
+        .register-container input[type="password"]:focus,
+        .register-container input[type="email"]:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            outline: none;
+            background-color: #fff;
+        }
+        .register-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .register-container button:hover {
+            background-color: #0056b3;
+        }
+        .register-container a {
+            display: block;
+            margin-top: 15px;
+            text-align: center;
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .register-container a:hover {
+            color: #0056b3;
+        }
+        .register-container label {
+            color: #495057;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Registrar Usuario</h2>
+        <form action="{% url 'registro_usuario' %}" method="post">
+            {% csrf_token %}
+            <div>
+                {{ form.username.label_tag }}{{ form.username }}
+            </div>
+            <div>
+                {{ form.email.label_tag }}{{ form.email }}
+            </div>
+            <div>
+                {{ form.password.label_tag }}{{ form.password }}
+            </div>
+            <div>
+                {{ form.confirm_password.label_tag }}{{ form.confirm_password }}
+            </div>
+            <div>
+                {{ form.bot_id.label_tag }}{{ form.bot_id }}
+            </div>
+            <div>
+                {{ form.chat_id.label_tag }}{{ form.chat_id }}
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+        <a href="{% url 'logout' %}">Cerrar sesión</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+2024-06-27 23:17:57.352 [info] Experiment 'pythonCreateEnvOnPipInstall' is active
+2024-06-27 23:17:57.352 [info] Experiment 'pythonRecommendTensorboardExt' is active
+2024-06-27 23:17:57.352 [info] Experiment 'pythonTerminalEnvVarActivation' is active
+2024-06-27 23:17:57.352 [info] Experiment 'pythonTestAdapter' is active
+2024-06-27 23:17:57.352 [info] Default formatter is set to null for workspace /root/proyecto-ps/programacion/contenedor/app/programacion
+2024-06-27 23:17:57.352 [info] Python interpreter path: /bin/python3
+2024-06-27 23:17:57.498 [info] > pyenv which python
+2024-06-27 23:17:57.498 [info] cwd: .
+2024-06-27 23:18:03.997 [info] Starting Pylance language server.
+2024-06-27 23:27:03.375 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/forms.py
+2024-06-27 23:28:10.778 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-27 23:28:11.825 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-27 23:50:57.272 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-27 23:51:52.390 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-06-27 23:53:32.225 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/models.py
+2024-06-27 23:53:36.758 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/forms.py
+2024-06-27 23:56:17.313 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/telegram.py
+2024-06-27 23:56:19.551 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/telegram.py
+2024-06-28 00:08:37.846 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/telegram.py
+2024-06-28 00:26:35.660 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py

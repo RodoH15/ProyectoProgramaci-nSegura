@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle Ejercicio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f0f8ff, #ffffff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        h1 {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            margin: -20px -20px 20px -20px;
+            border-radius: 10px 10px 0 0;
+            font-size: 2rem;
+            font-weight: bold;
+            animation: slideIn 0.5s ease-in-out;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        p {
+            color: #333;
+            font-size: 1.1rem;
+            margin: 20px 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+        .btn-logout {
+            background-color: #e74c3c;
+        }
+        .btn-logout:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+        .decorative-circle {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 50%;
+            z-index: -1;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        .decorative-circle-1 {
+            top: -50px;
+            left: -50px;
+        }
+        .decorative-circle-2 {
+            bottom: -50px;
+            right: -50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="decorative-circle decorative-circle-1"></div>
+        <div class="decorative-circle decorative-circle-2"></div>
+        <h1>{{ ejercicio.nombre_ejercicio }}</h1>
+        <p>{{ ejercicio.descripcion_ejercicio }}</p>
+        <p>Fecha de entrega: {{ ejercicio.fecha_entrega }}</p>
+        {% csrf_token %}
+        <a href="{% url 'listar_ejercicios' %}" class="btn">Volver</a>
+        <a href="{% url 'logout' %}" class="btn btn-logout">Cerrar sesión</a>
+    </div>
+</body>
+</html>

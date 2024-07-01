@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Ejercicios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin: 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .card-header {
+            background-color: #f8f9fa;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .card-body p {
+            margin: 0;
+        }
+        .card-footer {
+            background-color: #f8f9fa;
+            text-align: right;
+        }
+        .card-footer a {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .card-footer a:hover {
+            background-color: #0056b3;
+        }
+        .logout {
+            display: block;
+            text-align: center;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            width: 150px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+        .logout:hover {
+            background-color: #c0392b;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #343a40;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-align: center;
+            display: block;
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#"><i class="fas fa-home"></i></a>
+        <a href="#"><i class="fas fa-list"></i></a>
+        <a href="#"><i class="fas fa-user"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+        <a href="#"><i class="fas fa-chart-line"></i></a>
+        <a href="#"><i class="fas fa-book"></i></a>
+    </div>
+    <div style="margin-left: 200px;">
+        <div class="header">Listar Ejercicios</div>
+        <div class="container">
+            <div class="row">
+                {% csrf_token %}
+                {% for ejercicio in ejercicios %}
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">{{ ejercicio.nombre_ejercicio }}</div>
+                        <div class="card-body">
+                            <p>Inicia: {{ ejercicio.fecha_inicio }}</p>
+                            <p>Termina: {{ ejercicio.fecha_termino }}</p>
+                            <p>Tipo: {{ ejercicio.tipo }}</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="{% url 'detalle_ejercicio' ejercicio.id %}">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <a href="{% url 'logout' %}" class="logout">Cerrar sesión</a>
+        </div>
+    </div>
+</body>
+</html>

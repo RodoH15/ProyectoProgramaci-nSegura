@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Alumno</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #e9f7ef; /* Verde claro para el fondo */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .header {
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin: 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            background: linear-gradient(145deg, #e6f7ff, #ffffff);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card-header {
+            background-color: #28a745;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .card-body {
+            padding: 20px;
+            background: linear-gradient(135deg, #e6f7ff 0%, #ffffff 100%);
+        }
+        .list-group-item {
+            font-size: 1rem;
+            color: #666;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .list-group-item:hover {
+            background-color: #d4edda;
+        }
+        .list-group-item a {
+            color: #28a745;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+        .list-group-item a:hover {
+            color: #19692c;
+        }
+        .logout {
+            display: block;
+            text-align: center;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            width: 150px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+        .logout:hover {
+            background-color: #c0392b;
+        }
+        .decorative-element {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: rgba(40, 167, 69, 0.1);
+            border-radius: 50%;
+            z-index: -1;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        .decorative-element-1 {
+            top: -50px;
+            left: -50px;
+        }
+        .decorative-element-2 {
+            bottom: -50px;
+            right: -50px;
+        }
+        .decorative-rectangle {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(40, 167, 69, 0.1);
+            border-radius: 10px;
+            z-index: -1;
+            animation: rotate 8s linear infinite;
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .decorative-rectangle-1 {
+            top: -30px;
+            left: 20px;
+        }
+        .decorative-rectangle-2 {
+            bottom: -30px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Menú Alumno</div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="decorative-element decorative-element-1"></div>
+                    <div class="decorative-element decorative-element-2"></div>
+                    <div class="decorative-rectangle decorative-rectangle-1"></div>
+                    <div class="decorative-rectangle decorative-rectangle-2"></div>
+                    <div class="card-header">
+                        Menú Alumno
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            {% csrf_token %}
+                            <li class="list-group-item"><a href="{% url 'listar_ejercicios' %}">Listar Ejercicios</a></li>
+                            {% if ejercicios %}
+                                {% for ejercicio in ejercicios %}
+                                    <li class="list-group-item">
+                                        <a href="{% url 'detalle_ejercicio' ejercicio.id %}">Detalle del Ejercicio {{ ejercicio.nombre_ejercicio }}</a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="{% url 'subir_respuesta' ejercicio.id %}">Subir Respuesta para {{ ejercicio.nombre_ejercicio }}</a>
+                                    </li>
+                                {% endfor %}
+                            {% else %}
+                                <li class="list-group-item">No hay ejercicios disponibles</li>
+                            {% endif %}
+                            <li class="list-group-item"><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

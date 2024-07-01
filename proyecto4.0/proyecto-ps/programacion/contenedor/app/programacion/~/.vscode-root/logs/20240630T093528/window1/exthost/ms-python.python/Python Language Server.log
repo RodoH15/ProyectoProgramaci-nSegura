@@ -1,0 +1,27 @@
+2024-06-30 09:35:35.230 [info] (Client) Pylance async client (2024.6.1) started with python extension (2024.8.1)
+2024-06-30 09:35:36.452 [info] [Info  - 09:35:36] (4258) Pylance language server 2024.6.1 (pyright version 1.1.364, commit 0618acc5) starting
+2024-06-30 09:35:36.453 [info] [Info  - 09:35:36] (4258) Server root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-06-30 09:35:36.454 [info] [Info  - 09:35:36] (4258) Starting service instance "programacion"
+2024-06-30 09:35:36.500 [info] Auto-Indent enabled
+2024-06-30 09:35:36.524 [info] Auto-Indent enabled
+2024-06-30 09:35:36.526 [info] [Info  - 09:35:36] (4258) Setting pythonPath for service "programacion": "/bin/python3"
+2024-06-30 09:35:36.526 [info] [Info  - 09:35:36] (4258) Setting environmentName for service "programacion": "3.9.2 (global)"
+2024-06-30 09:35:36.559 [info] [Info  - 09:35:36] (4258) Assuming Python version 3.9.2.final.0
+2024-06-30 09:35:36.944 [info] [Info  - 09:35:36] (4258) Found 31 source files
+2024-06-30 09:35:36.949 [info] Auto-Indent enabled
+2024-06-30 09:35:37.639 [info] [Info  - 09:35:37] (4258) Background analysis(1) root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-06-30 09:35:37.658 [info] [Info  - 09:35:37] (4258) Background analysis(1) started
+2024-06-30 09:35:38.483 [info] [Info  - 09:35:38] (4258) Indexer background runner(2) root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist (index)
+2024-06-30 09:35:38.484 [info] [Info  - 09:35:38] (4258) Indexing(2) started
+2024-06-30 09:35:40.070 [info] [Info  - 09:35:40] (4258) scanned(2) 87 files over 1 exec env
+2024-06-30 09:35:40.410 [info] [Info  - 09:35:40] (4258) indexed(2) 51 files over 1 exec env
+2024-06-30 09:35:40.451 [info] [Info  - 09:35:40] (4258) Indexing finished(2).
+2024-06-30 10:38:05.365 [info] [Info  - 10:38:05] (4258) Starting service instance "<default>"
+2024-06-30 10:38:05.401 [info] Auto-Indent enabled
+2024-06-30 10:38:05.405 [info] [Info  - 10:38:05] (4258) Setting pythonPath for service "<default>": "/bin/python3"
+2024-06-30 10:38:05.406 [info] [Info  - 10:38:05] (4258) Setting environmentName for service "<default>": "3.9.2 (global)"
+2024-06-30 10:38:05.440 [info] [Info  - 10:38:05] (4258) Assuming Python version 3.9.2.final.0
+2024-06-30 10:38:05.581 [info] [Info  - 10:38:05] (4258) No source files found.
+2024-06-30 10:38:05.979 [info] [Info  - 10:38:05] (4258) Background analysis(3) root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-06-30 10:38:05.982 [info] [Info  - 10:38:05] (4258) Background analysis(3) started
+2024-06-30 14:10:45.823 [info] [Info  - 14:10:45] (4258) Found 32 source files

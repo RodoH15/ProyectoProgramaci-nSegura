@@ -1,0 +1,35 @@
+{
+    "userDataProfilesMigration": true,
+    "profileAssociations": {
+        "workspaces": {},
+        "emptyWindows": {
+            "1719724944671": "__default__profile__"
+        }
+    },
+    "profileAssociationsMigration": true,
+    "telemetry.sqmId": "",
+    "telemetry.machineId": "a2e8dc97f8c6d6f051544d72c3236e7c0c2dd71933091a55d7a0dddec7bf23c1",
+    "telemetry.devDeviceId": "0b3daa15-3e33-4239-ace0-9806b515aabc",
+    "backupWorkspaces": {
+        "workspaces": [],
+        "folders": [],
+        "emptyWindows": [
+            {
+                "backupFolder": "1719724944671"
+            }
+        ]
+    },
+    "windowsState": {
+        "lastActiveWindow": {
+            "backupPath": "/root/proyecto-ps/programacion/~/.vscode-root/Backups/1719724944671",
+            "uiState": {
+                "mode": 1,
+                "x": 352,
+                "y": 84,
+                "width": 1024,
+                "height": 768
+            }
+        },
+        "openedWindows": []
+    }
+}
