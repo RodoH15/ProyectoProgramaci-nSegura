@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Ejercicios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin: 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .card-header {
+            background-color: #f8f9fa;
+            font-size: 1.25rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-header .icon {
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .card-body p {
+            margin: 0;
+            font-size: 1rem;
+        }
+        .card-footer {
+            background-color: #f8f9fa;
+            text-align: right;
+        }
+        .card-footer a {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .card-footer a:hover {
+            background-color: #0056b3;
+        }
+        .logout {
+            display: block;
+            text-align: center;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            width: 150px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+        .logout:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Listar Ejercicios</div>
+    <div class="container">
+        <div class="row">
+            {% csrf_token %}
+            {% for ejercicio in ejercicios %}
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <span>{{ ejercicio.nombre_ejercicio }}</span>
+                        <span class="icon"><i class="fas fa-book-open"></i></span>
+                    </div>
+                    <div class="card-body">
+                        <p>Detalles del ejercicio</p>
+                        <ul>
+                            <li>Descripción: {{ ejercicio.descripcion }}</li>
+                            <li>Calificación máxima: {{ ejercicio.calificacion_maxima }}</li>
+                            <li>Tipo: {{ ejercicio.tipo }}</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{% url 'detalle_ejercicio' ejercicio.id %}">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <a href="{% url 'logout' %}" class="logout">Cerrar sesión</a>
+    </div>
+</body>
+</html>

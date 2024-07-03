@@ -1,0 +1,18 @@
+2024-07-02 20:06:30.327 [info] Experiment 'pythonCreateEnvOnPipInstall' is active
+2024-07-02 20:06:30.327 [info] Experiment 'pythonRecommendTensorboardExt' is active
+2024-07-02 20:06:30.328 [info] Experiment 'pythonTerminalEnvVarActivation' is active
+2024-07-02 20:06:30.328 [info] Experiment 'pythonTestAdapter' is active
+2024-07-02 20:06:30.543 [info] Default formatter is set to null for workspace /root/proyecto-ps/programacion/contenedor/app/programacion
+2024-07-02 20:06:30.593 [info] Python interpreter path: /bin/python3
+2024-07-02 20:06:31.336 [info] > pyenv which python
+2024-07-02 20:06:31.336 [info] cwd: .
+2024-07-02 20:06:33.767 [info] Starting Pylance language server.
+2024-07-02 20:10:41.331 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-07-02 21:14:06.718 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-07-02 21:38:58.765 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/scripts/api.py
+2024-07-02 21:41:51.265 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-07-02 21:52:28.416 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-07-02 21:52:29.365 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-07-02 22:13:38.101 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/scripts/api.py
+2024-07-02 22:20:39.662 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/scripts/api.py
+2024-07-02 22:20:40.406 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/scripts/api.py

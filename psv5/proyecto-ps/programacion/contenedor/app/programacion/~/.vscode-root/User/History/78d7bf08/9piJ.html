@@ -1,0 +1,16 @@
+hhhhh<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Subir Respuesta</title>
+</head>
+<body>
+    <h1>Subir Respuesta para {{ ejercicio.nombre_ejercicio }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Subir Respuesta</button>
+    </form>
+    <a href="{% url 'logout' %}">Cerrar sesión</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+CONTAINER ID   IMAGE                   COMMAND                  CREATED       STATUS         PORTS                                                                      NAMES
+2bb2d170f224   programacion_executor   "/start/start.sh"        5 hours ago   Up 5 minutes                                                                              programacion_executor_1
+862afce941b1   programacion            "/start/start.sh"        8 hours ago   Up 5 minutes                                                                              programacion_app_1
+d6eda28b8312   nginx                   "/docker-entrypoint.…"   8 hours ago   Up 5 minutes   0.0.0.0:80->80/tcp, :::80->80/tcp, 0.0.0.0:443->443/tcp, :::443->443/tcp   programacion_nginx_1
+5d45b579dd77   mysql                   "docker-entrypoint.s…"   8 hours ago   Up 5 minutes   3306/tcp, 33060/tcp                                                        programacion_bd_1
+CONTAINER ID   IMAGE                   COMMAND                  CREATED       STATUS         PORTS                                                                      NAMES
+2bb2d170f224   programacion_executor   "/start/start.sh"        5 hours ago   Up 5 minutes                                                                              programacion_executor_1
+862afce941b1   programacion            "/start/start.sh"        8 hours ago   Up 5 minutes                                                                              programacion_app_1
+d6eda28b8312   nginx                   "/docker-entrypoint.…"   8 hours ago   Up 5 minutes   0.0.0.0:80->80/tcp, :::80->80/tcp, 0.0.0.0:443->443/tcp, :::443->443/tcp   programacion_nginx_1
+5d45b579dd77   mysql                   "docker-entrypoint.s…"   8 hours ago   Up 5 minutes   3306/tcp, 33060/tcp                                                        programacion_bd_1
+CONTAINER ID   IMAGE                   COMMAND                  CREATED       STATUS         PORTS                                                                      NAMES
+2bb2d170f224   programacion_executor   "/start/start.sh"        5 hours ago   Up 5 minutes                                                                              programacion_executor_1
+862afce941b1   programacion            "/start/start.sh"        8 hours ago   Up 5 minutes                                                                              programacion_app_1
+d6eda28b8312   nginx                   "/docker-entrypoint.…"   8 hours ago   Up 5 minutes   0.0.0.0:80->80/tcp, :::80->80/tcp, 0.0.0.0:443->443/tcp, :::443->443/tcp   programacion_nginx_1
+5d45b579dd77   mysql                   "docker-entrypoint.s…"   8 hours ago   Up 5 minutes   3306/tcp, 33060/tcp                                                        programacion_bd_1
+[H[2J[3J[H[2J[3J

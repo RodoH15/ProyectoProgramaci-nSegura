@@ -1,0 +1,18 @@
+2024-07-01 13:48:40.741 [info] Experiment 'pythonCreateEnvOnPipInstall' is active
+2024-07-01 13:48:40.741 [info] Experiment 'pythonRecommendTensorboardExt' is active
+2024-07-01 13:48:40.741 [info] Experiment 'pythonTerminalEnvVarActivation' is active
+2024-07-01 13:48:40.741 [info] Experiment 'pythonTestAdapter' is active
+2024-07-01 13:48:40.971 [info] Default formatter is set to null for workspace /root/proyecto-ps/programacion/contenedor/app/programacion
+2024-07-01 13:48:41.041 [info] Python interpreter path: /bin/python3
+2024-07-01 13:48:41.855 [info] > pyenv which python
+2024-07-01 13:48:41.855 [info] cwd: .
+2024-07-01 13:48:50.720 [info] Starting Pylance language server.
+2024-07-01 13:54:17.746 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/settings.py
+2024-07-01 13:54:18.422 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/settings.py
+2024-07-01 13:54:18.695 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/settings.py
+2024-07-01 14:14:03.727 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-07-01 14:14:26.888 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-07-01 14:21:27.262 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-07-01 14:21:27.610 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/views.py
+2024-07-01 14:45:09.260 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/forms.py
+2024-07-01 14:47:04.029 [info] Discover tests for workspace name: programacion - uri: /root/proyecto-ps/programacion/contenedor/app/programacion/forms.py

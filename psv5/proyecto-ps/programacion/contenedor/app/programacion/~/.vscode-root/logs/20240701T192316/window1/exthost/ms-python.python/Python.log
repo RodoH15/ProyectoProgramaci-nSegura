@@ -1,0 +1,10 @@
+2024-07-01 19:23:28.740 [info] Experiment 'pythonCreateEnvOnPipInstall' is active
+2024-07-01 19:23:28.740 [info] Experiment 'pythonRecommendTensorboardExt' is active
+2024-07-01 19:23:28.740 [info] Experiment 'pythonTerminalEnvVarActivation' is active
+2024-07-01 19:23:28.740 [info] Experiment 'pythonTestAdapter' is active
+2024-07-01 19:23:28.818 [info] Default formatter is set to null for workspace /root/proyecto-ps/programacion/contenedor/app/programacion
+2024-07-01 19:23:28.867 [info] Python interpreter path: /bin/python3
+2024-07-01 19:23:29.208 [info] > pyenv which python
+2024-07-01 19:23:29.208 [info] cwd: .
+2024-07-01 19:23:33.239 [info] Shell integration status changed, can confirm it's working.
+2024-07-01 19:23:35.752 [info] Starting Pylance language server.

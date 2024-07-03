@@ -1,0 +1,21 @@
+2024-06-30 17:10:21.511 [info] Started local extension host with pid 3822.
+2024-06-30 17:10:35.264 [info] [perf] Render performance baseline is 449ms
+2024-06-30 17:10:35.558 [error] XHR failed: Failed: XHR failed
+    at te.B (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:798:37829)
+    at async te.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:798:34606)
+    at async Q (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:798:33533)
+    at async te.query (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:798:33831)
+    at async o.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1695:129954)
+2024-06-30 17:10:35.594 [warning] Failed to fetch chat participant registry XHR failed
+2024-06-30 17:15:35.692 [warning] Failed to fetch chat participant registry XHR failed
+2024-06-30 17:20:35.853 [warning] Failed to fetch chat participant registry XHR failed
+2024-06-30 17:25:35.955 [warning] Failed to fetch chat participant registry XHR failed
+2024-06-30 17:30:36.012 [warning] Failed to fetch chat participant registry XHR failed
+2024-06-30 17:35:36.079 [warning] Failed to fetch chat participant registry XHR failed
+2024-06-30 17:40:36.138 [warning] Failed to fetch chat participant registry XHR failed
+2024-06-30 17:45:36.205 [warning] Failed to fetch chat participant registry XHR failed
+2024-06-30 17:50:36.300 [warning] Failed to fetch chat participant registry XHR failed
+2024-06-30 17:55:36.439 [warning] Failed to fetch chat participant registry XHR failed
+2024-06-30 18:00:36.585 [warning] Failed to fetch chat participant registry XHR failed
+2024-06-30 18:05:44.792 [warning] Failed to fetch chat participant registry XHR failed
+2024-06-30 18:10:46.841 [warning] Failed to fetch chat participant registry XHR failed

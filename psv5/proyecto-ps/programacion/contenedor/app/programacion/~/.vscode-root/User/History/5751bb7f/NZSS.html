@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado de la Respuesta</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #f4f4f4);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 60%;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header {
+            text-align: center;
+            background: #4caf50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .content {
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .content p {
+            margin: 10px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .footer a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Resultado de la Respuesta</h1>
+        </div>
+        <div class="content">
+            <p><strong>Ejercicio:</strong> {{ respuesta.ejercicio.nombre_ejercicio }}</p>
+            <p><strong>Alumno:</strong> {{ respuesta.nombre_alumno }}</p>
+            <p><strong>Puntaje:</strong> {{ respuesta.puntaje }}</p>
+        </div>
+        <div class="footer">
+            <a href="{% url 'subir_respuesta' respuesta.ejercicio.id %}">Volver</a>
+        </div>
+    </div>
+</body>
+</html>

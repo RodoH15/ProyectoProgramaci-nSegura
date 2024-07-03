@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Maestro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            margin-top: 5%;
+        }
+        .welcome-message {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            background-color: white;
+        }
+        .card-header {
+            background-color: #34495e;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            text-align: center;
+        }
+        .card-body {
+            padding: 30px;
+        }
+        .option {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .option i {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .option h5 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+        .option p {
+            font-size: 1rem;
+            color: #666;
+        }
+        .option:hover i {
+            color: #0056b3;
+        }
+        .option:hover h5 {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-message">
+            Bienvenidos al Sistema de Evaluación Eminus 5
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Menú Maestro
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4 option">
+                        <a href="{% url 'crear_ejercicio' %}" class="btn-link">
+                            <i class="fas fa-plus-circle"></i>
+                            <h5>Crear Ejercicio</h5>
+                            <p>Crea un nuevo ejercicio para tus alumnos.</p>
+                        </a>
+                    </div>
+                    <div class="col-md-4 option">
+                        <a href="{% url 'ver_respuestas' %}" class="btn-link">
+                            <i class="fas fa-eye"></i>
+                            <h5>Ver Respuestas de Ejercicios</h5>
+                            <p>Revisa las respuestas enviadas por los alumnos.</p>
+                        </a>
+                    </div>
+                    <div class="col-md-4 option">
+                        <a href="{% url 'ver_puntajes' %}" class="btn-link">
+                            <i class="fas fa-chart-line"></i>
+                            <h5>Ver Puntajes</h5>
+                            <p>Consulta los puntajes de los alumnos.</p>
+                        </a>
+                    </div>
+                    <div class="col-md-4 option">
+                        <a href="{% url 'listar_ejercicios' %}" class="btn-link">
+                            <i class="fas fa-list"></i>
+                            <h5>Listar Ejercicios</h5>
+                            <p>Ver todos los ejercicios creados.</p>
+                        </a>
+                    </div>
+                    <div class="col-md-4 option">
+                        <a href="{% url 'logout' %}" class="btn-link">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <h5>Cerrar sesión</h5>
+                            <p>Salir de la plataforma.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

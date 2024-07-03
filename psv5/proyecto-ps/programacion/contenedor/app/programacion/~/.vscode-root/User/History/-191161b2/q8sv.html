@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Alumno</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            margin-top: 5%;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #666;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1 class="display-4">Bienvenidos al Sistema de Evaluación Eminus 5</h1>
+        <p class="lead">Menú Alumno</p>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="{% url 'detalle_ejercicio' %}" class="btn btn-outline-primary btn-lg btn-block">Ver Detalle del Ejercicio</a>
+            </div>
+            <div class="col-md-4">
+                <a href="{% url 'subir_respuesta' %}" class="btn btn-outline-success btn-lg btn-block">Subir Respuesta</a>
+            </div>
+            <div class="col-md-4">
+                <a href="{% url 'ver_puntajes_alumno' %}" class="btn btn-outline-info btn-lg btn-block">Ver Mis Puntajes</a>
+            </div>
+        </div>
+        <div class="mt-5">
+            <a href="{% url 'logout' %}" class="btn btn-outline-danger btn-lg">Cerrar sesión</a>
+        </div>
+        <div class="footer mt-3">
+            <p>© 2024 Universidad Veracruzana. Todos los derechos reservados.</p>
+            <p>
+                <a href="#">Términos de Servicio</a> |
+                <a href="#">Política de Privacidad</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

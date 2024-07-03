@@ -1,0 +1,21 @@
+2024-07-01 19:23:33.257 [info] (Client) Pylance async client (2024.6.1) started with python extension (2024.8.1)
+2024-07-01 19:23:35.686 [info] [Info  - 19:23:35] (17983) Pylance language server 2024.6.1 (pyright version 1.1.364, commit 0618acc5) starting
+2024-07-01 19:23:35.687 [info] [Info  - 19:23:35] (17983) Server root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-07-01 19:23:35.687 [info] [Info  - 19:23:35] (17983) Starting service instance "programacion"
+2024-07-01 19:23:35.789 [info] Auto-Indent enabled
+2024-07-01 19:23:35.838 [info] Auto-Indent enabled
+2024-07-01 19:23:35.848 [info] [Info  - 19:23:35] (17983) Setting pythonPath for service "programacion": "/bin/python3"
+2024-07-01 19:23:35.850 [info] [Info  - 19:23:35] (17983) Setting environmentName for service "programacion": "3.9.2 (global)"
+2024-07-01 19:23:35.929 [info] [Info  - 19:23:35] (17983) Assuming Python version 3.9.2.final.0
+2024-07-01 19:23:36.762 [info] [Info  - 19:23:36] (17983) Found 32 source files
+2024-07-01 19:23:36.777 [info] Auto-Indent enabled
+2024-07-01 19:23:39.088 [info] [Info  - 19:23:39] (17983) Background analysis(1) root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-07-01 19:23:39.099 [info] [Info  - 19:23:39] (17983) Background analysis(1) started
+2024-07-01 19:23:40.474 [info] [Info  - 19:23:40] (17983) Indexer background runner(2) root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist (index)
+2024-07-01 19:23:40.475 [info] [Info  - 19:23:40] (17983) Indexing(2) started
+2024-07-01 19:23:43.014 [info] [Info  - 19:23:43] (17983) [BG(1)] Long operation: checking: file:///root/proyecto-ps/programacion/contenedor/app/programacion/scripts/scripts.py (2607ms)
+2024-07-01 19:23:43.017 [info] [Info  - 19:23:43] (17983) [BG(1)] Long operation: analyzing: file:///root/proyecto-ps/programacion/contenedor/app/programacion/scripts/scripts.py (3386ms)
+2024-07-01 19:23:44.001 [info] [Info  - 19:23:44] (17983) [IDX(2)] Long operation: scan packages file:///root/proyecto-ps/programacion/contenedor/app/programacion (3192ms)
+2024-07-01 19:23:44.002 [info] [Info  - 19:23:44] (17983) scanned(2) 87 files over 1 exec env
+2024-07-01 19:23:44.970 [info] [Info  - 19:23:44] (17983) indexed(2) 51 files over 1 exec env
+2024-07-01 19:23:45.128 [info] [Info  - 19:23:45] (17983) Indexing finished(2).

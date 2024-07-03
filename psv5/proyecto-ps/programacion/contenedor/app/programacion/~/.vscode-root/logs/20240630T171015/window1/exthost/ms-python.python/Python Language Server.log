@@ -1,0 +1,20 @@
+2024-06-30 17:10:34.269 [info] (Client) Pylance async client (2024.6.1) started with python extension (2024.8.1)
+2024-06-30 17:10:37.206 [info] [Info  - 17:10:37] (3935) Pylance language server 2024.6.1 (pyright version 1.1.364, commit 0618acc5) starting
+2024-06-30 17:10:37.207 [info] [Info  - 17:10:37] (3935) Server root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-06-30 17:10:37.207 [info] [Info  - 17:10:37] (3935) Starting service instance "programacion"
+2024-06-30 17:10:37.292 [info] Auto-Indent enabled
+2024-06-30 17:10:37.340 [info] Auto-Indent enabled
+2024-06-30 17:10:37.347 [info] [Info  - 17:10:37] (3935) Setting pythonPath for service "programacion": "/bin/python3"
+2024-06-30 17:10:37.348 [info] [Info  - 17:10:37] (3935) Setting environmentName for service "programacion": "3.9.2 (global)"
+2024-06-30 17:10:37.432 [info] [Info  - 17:10:37] (3935) Assuming Python version 3.9.2.final.0
+2024-06-30 17:10:38.384 [info] [Info  - 17:10:38] (3935) Found 32 source files
+2024-06-30 17:10:38.398 [info] Auto-Indent enabled
+2024-06-30 17:10:41.305 [info] [Info  - 17:10:41] (3935) Background analysis(1) root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-06-30 17:10:41.317 [info] [Info  - 17:10:41] (3935) Background analysis(1) started
+2024-06-30 17:10:43.332 [info] [Info  - 17:10:43] (3935) Indexer background runner(2) root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist (index)
+2024-06-30 17:10:43.336 [info] [Info  - 17:10:43] (3935) Indexing(2) started
+2024-06-30 17:10:46.697 [info] [Info  - 17:10:46] (3935) [IDX(2)] Long operation: scan packages file:///root/proyecto-ps/programacion/contenedor/app/programacion (2943ms)
+2024-06-30 17:10:46.700 [info] [Info  - 17:10:46] (3935) scanned(2) 87 files over 1 exec env
+2024-06-30 17:10:48.199 [info] [Info  - 17:10:48] (3935) [BG(1)] Long operation: SemanticTokens full at file:///root/proyecto-ps/programacion/contenedor/app/programacion/views.py (4365ms)
+2024-06-30 17:10:48.250 [info] [Info  - 17:10:48] (3935) indexed(2) 51 files over 1 exec env
+2024-06-30 17:10:48.406 [info] [Info  - 17:10:48] (3935) Indexing finished(2).

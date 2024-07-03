@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Ejercicios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin: 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            background: linear-gradient(145deg, #e6e8ff, #ffffff);
+            position: relative;
+        }
+        .card-header {
+            background-color: #f8f9fa;
+            font-size: 1.25rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 2px solid #007bff;
+        }
+        .card-header .icon {
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+        .card-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #e6f7ff;
+        }
+        .card-body .icon {
+            font-size: 4rem;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .card-body p {
+            font-size: 1rem;
+            color: #666;
+            margin: 0;
+        }
+        .card-body .highlight {
+            font-size: 1.2rem;
+            color: #007bff;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .card-footer {
+            background-color: #f8f9fa;
+            text-align: right;
+            padding: 10px 20px;
+            border-top: 2px solid #007bff;
+        }
+        .card-footer a {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .card-footer a:hover {
+            background-color: #0056b3;
+        }
+        .logout {
+            display: block;
+            text-align: center;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            width: 150px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+        .logout:hover {
+            background-color: #c0392b;
+        }
+        .tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Listar Ejercicios</div>
+    <div class="container">
+        <div class="row">
+            {% csrf_token %}
+            {% for ejercicio in ejercicios %}
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="tag">Nuevo</div>
+                    <div class="card-header">
+                        <span>{{ ejercicio.nombre_ejercicio }}</span>
+                        <span class="icon"><i class="fas fa-book-open"></i></span>
+                    </div>
+                    <div class="card-body">
+                        <span class="icon"><i class="fas fa-tasks"></i></span>
+                        <p class="highlight">Fecha de Entrega: {{ ejercicio.fecha_entrega }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{% url 'detalle_ejercicio' ejercicio.id %}">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <a href="{% url 'logout' %}" class="logout">Cerrar sesión</a>
+    </div>
+</body>
+</html>

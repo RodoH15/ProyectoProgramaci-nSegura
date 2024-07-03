@@ -1,0 +1,28 @@
+2024-07-02 13:15:19.758 [info] (Client) Pylance async client (2024.6.1) started with python extension (2024.8.1)
+2024-07-02 13:15:21.296 [info] [Info  - 13:15:21] (4136) Pylance language server 2024.6.1 (pyright version 1.1.364, commit 0618acc5) starting
+2024-07-02 13:15:21.298 [info] [Info  - 13:15:21] (4136) Server root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-07-02 13:15:21.298 [info] [Info  - 13:15:21] (4136) Starting service instance "programacion"
+2024-07-02 13:15:21.389 [info] Auto-Indent enabled
+2024-07-02 13:15:21.417 [info] Auto-Indent enabled
+2024-07-02 13:15:21.418 [info] [Info  - 13:15:21] (4136) Setting pythonPath for service "programacion": "/bin/python3"
+2024-07-02 13:15:21.419 [info] [Info  - 13:15:21] (4136) Setting environmentName for service "programacion": "3.9.2 (global)"
+2024-07-02 13:15:21.474 [info] [Info  - 13:15:21] (4136) Assuming Python version 3.9.2.final.0
+2024-07-02 13:15:21.827 [info] [Info  - 13:15:21] (4136) Found 32 source files
+2024-07-02 13:15:21.833 [info] Auto-Indent enabled
+2024-07-02 13:15:24.969 [info] [Info  - 13:15:24] (4136) Background analysis(1) root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-07-02 13:15:24.970 [info] [Info  - 13:15:24] (4136) Background analysis(1) started
+2024-07-02 13:15:24.975 [info] [Info  - 13:15:24] (4136) Indexer background runner(2) root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist (index)
+2024-07-02 13:15:24.977 [info] [Info  - 13:15:24] (4136) Indexing(2) started
+2024-07-02 13:15:25.744 [info] [Info  - 13:15:25] (4136) scanned(2) 87 files over 1 exec env
+2024-07-02 13:15:26.226 [info] [Info  - 13:15:26] (4136) indexed(2) 51 files over 1 exec env
+2024-07-02 13:15:26.326 [info] [Info  - 13:15:26] (4136) Indexing finished(2).
+2024-07-02 13:15:26.576 [info] [Info  - 13:15:26] (4136) [BG(1)] Long operation: checking: file:///root/proyecto-ps/programacion/contenedor/app/programacion/views.py (2317ms)
+2024-07-02 13:15:26.577 [info] [Info  - 13:15:26] (4136) [BG(1)] Long operation: analyzing: file:///root/proyecto-ps/programacion/contenedor/app/programacion/views.py (3029ms)
+2024-07-02 15:55:59.072 [info] [Info  - 15:55:59] (4136) Starting service instance "<default>"
+2024-07-02 15:55:59.145 [info] Auto-Indent enabled
+2024-07-02 15:55:59.149 [info] [Info  - 15:55:59] (4136) Setting pythonPath for service "<default>": "/bin/python3"
+2024-07-02 15:55:59.149 [info] [Info  - 15:55:59] (4136) Setting environmentName for service "<default>": "3.9.2 (global)"
+2024-07-02 15:55:59.209 [info] [Info  - 15:55:59] (4136) Assuming Python version 3.9.2.final.0
+2024-07-02 15:55:59.459 [info] [Info  - 15:55:59] (4136) No source files found.
+2024-07-02 15:55:59.953 [info] [Info  - 15:55:59] (4136) Background analysis(3) root directory: file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.6.1/dist
+2024-07-02 15:55:59.956 [info] [Info  - 15:55:59] (4136) Background analysis(3) started

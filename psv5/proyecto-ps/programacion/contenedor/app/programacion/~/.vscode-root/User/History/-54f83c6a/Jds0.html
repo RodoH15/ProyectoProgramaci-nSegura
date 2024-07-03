@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio Cerrado</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background: #89b8e2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .alert {
+            color: #000000;
+            background-color: #87d2e4;
+            border-color: #88c2e2;
+            padding: 15px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="alert">
+            <h1>Ejercicio Cerrado</h1>
+            <p>La fecha de entrega ha pasado para el ejercicio {{ ejercicio.nombre_ejercicio }}. No puedes subir respuestas.</p>
+            <a href="{% url 'menu_alumno' %}" class="btn btn-primary">Volver al Menú Alumno</a>
+        </div>
+    </div>
+</body>
+</html>

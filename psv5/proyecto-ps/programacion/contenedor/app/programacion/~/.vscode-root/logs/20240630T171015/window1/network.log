@@ -1,0 +1,16 @@
+2024-06-30 17:10:28.633 [error] browser #1: https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery - error POST XHR failed
+2024-06-30 17:10:34.927 [error] browser #2: https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery - error POST XHR failed
+2024-06-30 17:10:35.544 [error] browser #3: https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery - error POST XHR failed
+2024-06-30 17:10:35.591 [error] browser #4: https://az764295.vo.msecnd.net/extensions/chat.json - error GET XHR failed
+2024-06-30 17:15:35.691 [error] browser #5: https://az764295.vo.msecnd.net/extensions/chat.json - error GET XHR failed
+2024-06-30 17:20:35.852 [error] browser #6: https://az764295.vo.msecnd.net/extensions/chat.json - error GET XHR failed
+2024-06-30 17:25:35.952 [error] browser #7: https://az764295.vo.msecnd.net/extensions/chat.json - error GET XHR failed
+2024-06-30 17:30:35.964 [error] browser #8: https://az764295.vo.msecnd.net/extensions/chat.json - error GET XHR failed
+2024-06-30 17:35:36.049 [error] browser #9: https://az764295.vo.msecnd.net/extensions/chat.json - error GET XHR failed
+2024-06-30 17:40:36.093 [error] browser #10: https://az764295.vo.msecnd.net/extensions/chat.json - error GET XHR failed
+2024-06-30 17:45:36.148 [error] browser #11: https://az764295.vo.msecnd.net/extensions/chat.json - error GET XHR failed
+2024-06-30 17:50:36.216 [error] browser #12: https://az764295.vo.msecnd.net/extensions/chat.json - error GET XHR failed
+2024-06-30 17:55:36.372 [error] browser #13: https://az764295.vo.msecnd.net/extensions/chat.json - error GET XHR failed
+2024-06-30 18:00:36.536 [error] browser #14: https://az764295.vo.msecnd.net/extensions/chat.json - error GET XHR failed
+2024-06-30 18:05:44.681 [error] browser #15: https://az764295.vo.msecnd.net/extensions/chat.json - error GET XHR failed
+2024-06-30 18:10:46.840 [error] browser #16: https://az764295.vo.msecnd.net/extensions/chat.json - error GET XHR failed

@@ -1,0 +1,12 @@
+2024-07-01 19:23:25.358 [info] Extension host with pid 17869 started
+2024-07-01 19:23:25.358 [info] Skipping acquiring lock for /root/proyecto-ps/programacion/contenedor/app/programacion/~/.vscode-root/User/workspaceStorage/2386edbb9f70495b74de1d3cbe6cf362.
+2024-07-01 19:23:26.315 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-07-01 19:23:26.355 [info] ExtensionService#_doActivateExtension ms-python.python, startup: false, activationEvent: 'onLanguage:python', root cause: ms-python.debugpy
+2024-07-01 19:23:28.244 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-07-01 19:23:29.272 [info] ExtensionService#_doActivateExtension ms-python.debugpy, startup: false, activationEvent: 'onLanguage:python'
+2024-07-01 19:23:29.492 [info] ExtensionService#_doActivateExtension ms-python.vscode-pylance, startup: false, activationEvent: 'onLanguage:python'
+2024-07-01 19:23:30.878 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-07-01 19:23:31.109 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-07-01 19:23:31.749 [info] Eager extensions activated
+2024-07-01 19:23:32.225 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-07-01 19:23:32.237 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'

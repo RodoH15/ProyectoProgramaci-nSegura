@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Maestro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #eef1f5;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            margin-top: 5%;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #343a40;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .list-group-item {
+            border: none;
+            padding: 15px 20px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .list-group-item:hover {
+            background-color: #f1f1f1;
+            color: #007bff;
+        }
+        .btn-link {
+            color: #007bff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .btn-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        .btn-link i {
+            margin-right: 10px;
+        }
+        .list-group-item a {
+            display: block;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #666;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function toggleRespuestas() {
+            var x = document.getElementById("respuestasList");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header text-center">
+                        Menú Maestro
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item text-center">
+                                <a href="{% url 'crear_ejercicio' %}" class="btn-link"><i class="fas fa-plus-circle"></i> Crear Ejercicio</a>
+                            </li>
+                            <li class="list-group-item text-center">
+                                <a href="javascript:void(0);" onclick="toggleRespuestas()" class="btn-link"><i class="fas fa-eye"></i> Ver Respuestas de Ejercicios</a>
+                            </li>
+                            <div id="respuestasList" style="display: none;">
+                                {% if ejercicios %}
+                                    {% for ejercicio in ejercicios %}
+                                        <li class="list-group-item text-center">
+                                            <a href="{% url 'ver_respuestas' ejercicio.id %}" class="btn-link"><i class="fas fa-clipboard-list"></i> Ver Respuestas del Ejercicio {{ ejercicio.nombre_ejercicio }}</a>
+                                        </li>
+                                    {% endfor %}
+                                {% else %}
+                                    <li class="list-group-item text-center">No hay ejercicios disponibles</li>
+                                {% endif %}
+                            </div>
+                            <li class="list-group-item text-center">
+                                <a href="{% url 'ver_puntajes' %}" class="btn-link"><i class="fas fa-chart-line"></i> Ver Puntajes</a>
+                            </li>
+                            <li class="list-group-item text-center">
+                                <a href="{% url 'listar_ejercicios' %}" class="btn-link"><i class="fas fa-list"></i> Listar Ejercicios</a>
+                            </li>
+                            <li class="list-group-item text-center">
+                                <a href="{% url 'logout' %}" class="btn-link"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
